@@ -1,0 +1,104 @@
+/* Fondo general con imagen */
+body, html {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: url('/src/assets/tu-fondo-perfumeria.jpg') center center no-repeat;
+  background-size: cover;
+  font-family: 'Lora', serif;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Contenedor principal centrado */
+.login-container {
+  min-height: 67vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  background-color: #ffffff;
+  font-family: 'Lora', serif;
+}
+
+/* Humo animado desde el centro inferior */
+.login-container::before {
+  content: '';
+  position: absolute;
+  bottom: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.893), transparent 70%);
+  animation: subirHumo 8s ease-in-out infinite;
+  filter: blur(30px);
+  opacity: 0.8;
+  pointer-events: none;
+  z-index: 1;
+}
+
+@keyframes subirHumo {
+  0% {
+    transform: translateX(-50%) translateY(0) scale(1);
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateX(-50%) translateY(-300px) scale(1.5);
+    opacity: 0;
+  }
+}
+
+/* Formulario */
+.login-form {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 2rem;
+  border: 2px solid #40140A;
+  border-radius: 16px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  color: #000000;
+  z-index: 3;
+}
+
+.login-form h2 {
+  text-align: center;
+  color: #000000;
+}
+
+.btn.nav-btn {
+  background-color: #000000;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn.nav-btn:hover {
+  background-color: #FBCD99;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.enlace-inscribirse {
+  color: #000000;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.enlace-inscribirse:hover {
+  color: #A95C2C;
+}
+
+.text-muted {
+  color: #333333 !important;
+}

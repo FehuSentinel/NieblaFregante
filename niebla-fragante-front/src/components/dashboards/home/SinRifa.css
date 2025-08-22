@@ -1,0 +1,75 @@
+.sinrifa-fondo {
+    position: relative;
+    height: 420px;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(6px);
+    border-radius: 20px;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: hidden;
+  }
+  
+  .clavo {
+    width: 14px;
+    height: 14px;
+    background-color: #40140A;
+    border-radius: 50%;
+    margin-top: 20px;
+    z-index: 10;
+  }
+  
+  /* Línea visual que simula la cuerda */
+  .cartel-colgante::before {
+    content: '';
+    position: absolute;
+    margin-top: 15.4px;
+    top: -30px;
+    left: 50%;
+    width: 2px;
+    height: 30px;
+    background-color: #40140A;
+    transform: translateX(-50%);
+  }
+  
+  .cartel-colgante {
+    margin-top: 10px;
+    background-color: #0D0D0D;
+    color: white;
+    padding: 2rem;
+    width: 300px;
+    text-align: center;
+    border-radius: 12px;
+    font-family: 'Lora', serif;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  
+    /* Animación de balanceo física desde el clavo */
+    animation: colgar 3s ease-in-out infinite;
+    transform-origin: top center; /* Aquí cuelga el cartel */
+    position: relative;
+  }
+  
+  @keyframes colgar {
+    0%   { transform: rotate(-3deg); }
+    50%  { transform: rotate(3deg); }
+    100% { transform: rotate(-3deg); }
+  }
+  
+  .mensaje-cartel {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .mensaje-secundario {
+    font-size: 1rem;
+    color: #F2CEA2;
+  }
+  
+  .contador {
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: #F2CEA2;
+  }
+  

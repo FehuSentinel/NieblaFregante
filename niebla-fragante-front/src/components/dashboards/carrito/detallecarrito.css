@@ -1,0 +1,93 @@
+/* === Layout de dos columnas para DetalleCarrito === */
+.detalle-carrito-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem 1rem; /* ← margen lateral en móvil */
+  border-radius: 20px;
+  background-color: #f5f5f5b0;
+  min-height: 80vh;
+  font-family: 'Lora', serif;
+  border: 2px solid #D97904;
+  box-sizing: border-box;
+}
+
+
+.columna-izquierda {
+  flex: 1;
+  min-width: 300px;
+}
+
+.columna-derecha {
+  flex: 1;
+  min-width: 300px;
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+   border: 2px solid #D97904;
+}
+
+/* === Lista de productos en el detalle === */
+.lista-detalle {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+  
+}
+
+.lista-detalle li {
+  padding: 0.3rem 0;
+  border-bottom: 1px dashed #ccc;
+  font-size: 0.95rem;
+}
+
+/* === Botones generales === */
+.pagar {
+  background-color: #000000;
+  color: white;
+  font-weight: bold;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+
+.pagar:hover {
+  background-color: #FBCD99;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(128, 128, 128, 0.4);
+}
+
+.pagar.activo {
+  background-color: #FBCD99;
+  color: white;
+}
+
+/* === Información de dirección === */
+.info-retiro {
+  margin: 1.5rem auto;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  color: #40140A;
+  border: 2px solid #D97904;
+  border-radius: 20px;
+  background: #fff;
+  text-align: center;
+  max-width: 90%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+.detalle-carrito {
+  background-color: #ffffff;
+  border: 2px solid #000000;
+  border-radius: 12px;
+  padding: 2rem;
+  font-family: 'Lora', serif;
+  color: #000000;
+}

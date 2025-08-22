@@ -1,0 +1,131 @@
+/* === Fondo oscuro semitransparente que cubre toda la pantalla (solo en modo modal) === */
+.modal-carrito-rifa {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(10, 10, 10, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1050;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+/* === Contenedor del contenido modal (común a ambos modos) === */
+.contenido-modal {
+  background-color: #0D0D0D;
+  color: #F2CEA2;
+  padding: 2rem;
+  border-radius: 1rem;
+  width: 100%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  position: relative;
+  box-sizing: border-box;
+}
+
+/* === Botón cerrar (solo visible en modo modal) === */
+.cerrar-panel {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #F2CEA2;
+  z-index: 1000;
+}
+
+/* === Título === */
+.contenido-modal h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #F2CEA2;
+  text-align: center;
+}
+
+/* === Lista de números === */
+.lista-numeros {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.lista-numeros li {
+  padding: 0.5rem;
+  border-bottom: 1px solid #D97904;
+  text-align: center;
+}
+
+/* === Total a pagar === */
+.total-pago {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #F2CEA2;
+}
+
+/* === Botones de acción === */
+.acciones-modal {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.btn-cancelar,
+.btn-pagar {
+  background-color: #000000;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.btn-cancelar {
+  background-color: #000000;
+  color: white;
+}
+
+.btn-cancelar:hover {
+  background-color: #FBCD99;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-pagar {
+  background-color: #000000;
+  color: white;
+}
+
+.btn-pagar:hover {
+  background-color: #FBCD99;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* === Responsividad móvil === */
+@media (max-width: 480px) {
+  .contenido-modal {
+    padding: 1.5rem;
+  }
+
+  .acciones-modal {
+    flex-direction: column;
+  }
+}

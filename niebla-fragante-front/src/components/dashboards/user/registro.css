@@ -1,0 +1,48 @@
+.registro-container {
+    min-height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('/src/assets/perfume-smoke.gif') center center no-repeat;
+    background-size: cover;
+  }
+  
+  .registro-form {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 2rem;
+    border: 2px solid #40140A;
+    border-radius: 16px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    color: #000000;
+  }
+  
+  .registro-form h2 {
+    text-align: center;
+    color: #000000;
+  }
+  
+  .btn.nav-btn {
+    background-color: #000000;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .btn.nav-btn:hover {
+    background-color: #FBCD99;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .alert {
+    border-radius: 10px;
+    text-align: center;
+  }
+  

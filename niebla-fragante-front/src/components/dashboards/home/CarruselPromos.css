@@ -1,0 +1,120 @@
+.container{
+    justify-content: center;
+    text-align: center;
+    
+}
+
+.titulo{
+    color: rgb(0, 0, 0);
+    height: 5vh;
+    text-align: center;
+    border-radius: 20px;
+    justify-content: center;
+    padding-left: 2vh;
+    padding-right: 2vh;
+
+}
+.promos-section{
+  background: rgba(255, 255, 255, 0.85);
+   height: auto; 
+}
+
+.container-carousel {
+    position: relative;
+    height: auto; 
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(6px);
+    border-radius: 20px;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: hidden;
+}
+
+/* Botón de scroll */
+.scroll-down-button {
+  position: absolute;
+  bottom: 0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.858);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s ease;
+  animation: bounce 2s infinite;
+}
+
+.scroll-down-button:hover {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.scroll-icon {
+  font-size: 1.5rem;
+  color: white;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0) translateX(-50%);
+  }
+  40% {
+    transform: translateY(-15px) translateX(-50%);
+  }
+  60% {
+    transform: translateY(-10px) translateX(-50%);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .welcome-overlay {
+    padding: 1.5rem 2rem;
+    width: 90%;
+  }
+  
+  .welcome-title {
+    font-size: 1.8rem;
+  }
+  
+  .welcome-subtitle {
+    font-size: 1rem;
+  }
+  
+  .scroll-down-button {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+
+/* Sección de promociones, estilo similar a bienvenida */
+.promos-section {
+  position: relative;
+  height: 30vh;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 25px;
+}
+
+/* Carrusel y sus hijos */
+.promos-section .carousel,
+.promos-section .carousel-inner,
+.promos-section .carousel-item {
+  height: 100%;
+}
+
+/* Imágenes del carrusel */
+.promos-section .carousel-image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}

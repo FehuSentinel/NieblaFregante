@@ -1,0 +1,94 @@
+.card-rifa {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  margin: auto;
+  border-radius: 12px;
+  border: 2px solid #000000;
+  background-color: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  color: #000000;
+  font-family: 'Lora', serif;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease-in-out;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-rifa:hover {
+  transform: scale(1.02);
+}
+
+.img-rifa {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  padding: 8px;
+  border-radius: 2vh;
+  display: block;
+}
+
+.cuerpo-rifa {
+  padding: 0.75rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-size: 0.85rem;
+}
+
+.titulo-rifa {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.ml-rifa {
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+.descripcion-rifa {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: #40140A;
+  text-align: justify;
+}
+
+.categoria-rifa {
+  font-size: 0.85rem;
+  color: #40140A;
+}
+
+.badge-descuento-rifa {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #c10000;
+  color: white;
+  font-weight: bold;
+  font-size: 0.75rem;
+  padding: 4px 8px;
+  border-radius: 6px;
+  z-index: 2;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.overlay-agotado-rifa {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+  z-index: 1;
+  border-radius: 12px;
+}

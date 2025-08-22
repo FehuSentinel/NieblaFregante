@@ -1,0 +1,60 @@
+.card-carrito {
+  width: 210px;
+  min-width: 220px;
+  margin-right: 12px;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+}
+
+.img-card-carrito {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+}
+
+.info-card-carrito {
+  padding: 0.5rem;
+}
+
+.precio-total {
+  font-weight: bold;
+  color: #A65C1B;
+}
+
+.stock-limite {
+  color: red;
+  font-size: 0.85rem;
+}
+
+.stock-actual {
+  font-size: 0.85rem;
+}
+
+.botones-card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 8px;
+}
+
+.botones-card button {
+  background-color: #000000;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  margin: 2px;
+  font-size: 0.8rem;
+}
+
+.botones-card button:hover {
+  background-color: #FBCD99;
+  color: white;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}

@@ -1,0 +1,360 @@
+/* =============================
+   🎴 CARD PRODUCTO – ESTILO REVISADO
+   ============================= */
+
+   .tarjeta-prod {
+    width: 100%;
+    max-width: 250px;
+    height: 390px;
+    margin: auto;
+    border-radius: 12px;
+    border: none;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    color: #000000;
+    font-family: 'Lora', serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    text-align: center;
+  }
+  
+  .tarjeta-prod:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(217, 121, 4, 0.3), 0 0 20px rgba(217, 121, 4, 0.2);
+  }
+  
+  .img-prod {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    padding: 8px;
+    border-radius: 2vh;
+    overflow: hidden;
+    display: block;
+  }
+  
+  .cuerpo-tarjeta {
+    padding: 0.75rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    font-size: 0.85rem;
+  }
+  
+  .titulo-prod {
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .ml-prod {
+    font-size: 0.85rem;
+    margin: 0;
+  }
+  
+  .precio-original {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #000000;
+  }
+  
+  .stock-prod {
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+  
+  /* Botones del cliente */
+  .cont-botones {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+  }
+  
+  .btn-agregar,
+  .btn-detalle {
+    background-color: #000000;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    margin: 0 5px;
+    font-size: 0.9rem;
+  }
+  
+  .btn-agregar:hover,
+  .btn-detalle:hover {
+    background-color: #FBCD99;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Botones del admin */
+  .botones-admin {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0.3rem;
+    flex-wrap: wrap;
+    margin-top: 0.75rem;
+    width: 100%;
+  }
+  
+  .btn-admin {
+    background-color: #0D0D0D;
+    color: #F2CEA2;
+    border: none;
+    font-size: 1rem;
+    border-radius: 6px;
+    min-width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    flex: 1;
+    max-width: 40px;
+  }
+  
+  .btn-admin:hover {
+    background-color: #D97904;
+    color: white;
+  }
+  
+  /* Responsive para pantallas pequeñas */
+  @media (max-width: 480px) {
+    .img-prod {
+      height: 280px;
+      width: 95%;
+      margin: 0 auto;
+    }
+    
+    .botones-admin {
+      gap: 0.2rem;
+    }
+    
+    .btn-admin {
+      min-width: 28px;
+      height: 28px;
+      font-size: 0.9rem;
+      max-width: 35px;
+    }
+  }
+  
+  /* Responsive para pantallas muy pequeñas */
+  @media (max-width: 360px) {
+    .img-prod {
+      height: 250px;
+      width: 92%;
+      margin: 0 auto;
+    }
+    
+    .botones-admin {
+      gap: 0.15rem;
+    }
+    
+    .btn-admin {
+      min-width: 24px;
+      height: 24px;
+      font-size: 0.8rem;
+      max-width: 30px;
+    }
+  }
+  
+  .overlay-agotado {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+    z-index: 1;
+    border-radius: 12px;
+  }
+  
+  /* Modal flotante */
+  .modal-detalle {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    animation: aparecer 0.3s ease;
+  }
+  
+  .modal-detalle .contenido-modal {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 400px;
+    position: relative;
+    color: #000000;
+    border: 2px solid #000000;
+    animation: aparecer 0.3s ease;
+    font-family: 'Lora', serif;
+  }
+  
+  .modal-detalle .contenido-modal h5,
+  .modal-detalle .contenido-modal h6,
+  .modal-detalle .contenido-modal p,
+  .modal-detalle .contenido-modal span {
+    color: #000000 !important;
+  }
+  
+  .modal-detalle .contenido-modal .precio-prod {
+    color: #000000 !important;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 1rem 0;
+  }
+  
+  .modal-detalle .contenido-modal .precio-original {
+    color: #888 !important;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  
+  .modal-detalle .contenido-modal .precio-descuento {
+    color: #c10000 !important;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .modal-detalle .contenido-modal .etiqueta-descuento {
+    color: #ffffff !important;
+    background-color: #c10000 !important;
+  }
+  
+  .modal-detalle .btn-cerrar {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #000000;
+  }
+  
+  .modal-detalle .img-modal {
+    width: 100%;
+    max-height: 200px;
+    object-fit: contain;
+    margin-bottom: 15px;
+  }
+  
+  .modal-detalle .info-detalle {
+    margin: 15px 0;
+  }
+  
+  .modal-detalle .info-detalle p {
+    margin: 5px 0;
+    color: #000000;
+    font-weight: 500;
+  }
+  
+  .modal-detalle .info-detalle h5,
+  .modal-detalle .info-detalle h6 {
+    color: #000000;
+    font-weight: bold;
+  }
+  
+  .modal-detalle .btn-agregar-modal {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+    border-radius: 10px !important;
+    font-weight: 500 !important;
+    padding: 6px 12px !important;
+    transition: all 0.2s ease !important;
+    font-family: 'Lora', serif !important;
+    border: 1px solid #000000 !important;
+    cursor: pointer !important;
+    width: 100% !important;
+    margin-top: 10px !important;
+  }
+  
+  .modal-detalle .btn-agregar-modal:hover {
+    color: #ffffff !important;
+    background-color: #D97904 !important;
+    text-decoration: none !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 8px rgba(217, 121, 4, 0.3) !important;
+    border-color: #D97904 !important;
+  }
+  
+  .modal-detalle .titulo-modal {
+    color: #000000 !important;
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  @keyframes aparecer {
+    from { opacity: 0; transform: scale(0.95); }
+    to   { opacity: 1; transform: scale(1); }
+  }
+  
+  @media (min-width: 768px) {
+    .tarjeta-prod {
+      height: 100%;
+    }
+  }
+  
+  .precio-prod {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #000000;
+  }
+  
+  /* ✅ Precio tachado (original) */
+  .precio-original {
+    text-decoration: line-through;
+    color: #888;
+    font-size: 1.6rem;
+    margin-bottom: 0;
+  }
+  
+  /* ✅ Precio con descuento en rojo */
+  .precio-descuento {
+    color: #c10000;
+    font-weight: bold;
+    font-size: 1.6rem;
+  }
+  
+  /* ✅ Etiqueta superior "Descuento" */
+  .etiqueta-descuento {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #c10000;
+    color: white;
+    font-weight: bold;
+    font-size: 0.75rem;
+    padding: 4px 8px;
+    border-radius: 6px;
+    z-index: 2;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  }

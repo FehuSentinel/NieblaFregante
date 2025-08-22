@@ -1,0 +1,37 @@
+.titulo-seccion {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #000000;
+  margin-bottom: 3rem;
+  margin-top: 3vh;
+   font-family: 'Lora', serif;
+}
+
+.titulo-seccion-container {
+  position: relative;
+  padding-left: 3rem;
+}
+
+.titulo-extra {
+  position: absolute;
+  left: 0;
+  bottom: -2.5rem;
+}
+
+.filtro-toggle {
+  background-color: #0D0D0D;
+  border: 1.5px solid #D97904;
+  border-radius: 8px;
+  padding: 0.4rem 0.75rem;
+  z-index: 10;
+}
+
+.filtro-toggle .icono-hamburguesa {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='white' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}

@@ -1,0 +1,52 @@
+body, html, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.app-background {
+   
+  background-size: cover;       
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* Estilos globales para el nuevo tema */
+* {
+  font-family: 'Lora', serif;
+}
+
+/* Estilos para contenedores semi transparentes */
+.semi-transparent-bg {
+  background-color: #ffffff;
+  border: 1px solid #D97904;
+  border-radius: 12px;
+}
+
+/* Botones con el nuevo tema */
+.theme-btn {
+  background-color: #000000;
+  color: #ffffff;
+  border: 1px solid #000000;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Lora', serif;
+  font-weight: 500;
+}
+
+.theme-btn:hover {
+  background-color: #D97904;
+  border-color: #D97904;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(217, 121, 4, 0.3);
+}
+
+/* Estilos para textos */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Lora', serif;
+}

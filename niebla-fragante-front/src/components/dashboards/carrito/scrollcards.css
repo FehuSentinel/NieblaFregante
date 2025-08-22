@@ -1,0 +1,25 @@
+.scrollcards-contenedor {
+  width: 100%;
+  padding: 1rem 0;
+  overflow-x: auto;
+}
+
+.scrollcards-horizontal {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 0.5rem;
+}
+
+.scrollcards-horizontal::-webkit-scrollbar {
+  height: 8px;
+}
+
+.scrollcards-horizontal::-webkit-scrollbar-thumb {
+  background: #A65C1B;
+  border-radius: 4px;
+}
+
+.scrollcards-horizontal::-webkit-scrollbar-track {
+  background: #f0f0f0;
+}

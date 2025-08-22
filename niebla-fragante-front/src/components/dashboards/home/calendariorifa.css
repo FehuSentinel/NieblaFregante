@@ -1,0 +1,106 @@
+.calendario-rifa {
+  padding: 1rem;
+  border-radius: 15px;
+  background-color: white;
+  color: #40140A;
+  max-width: 600px;
+  margin: auto;
+  border: 1px solid #D97904;
+   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+}
+
+.titulo-rifa {
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.info-rifa {
+  text-align: center;
+  font-size: 1rem;
+  margin: 0.2rem 0;
+}
+
+/* Grilla responsiva */
+.grilla-numeros {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
+  gap: 8px;
+  margin-top: 1rem;
+}
+
+.numero-rifa {
+  background-color: #555;
+  color: white;
+  font-weight: bold;
+  font-size: 0.9rem;
+  border: 2px solid white;
+  border-radius: 8px;
+  padding: 0.75rem;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.numero-rifa:hover {
+  background-color: #777;
+}
+
+.numero-rifa.vendido {
+  background-color: #8C2F0D;
+  color: #fff;
+  cursor: not-allowed;
+}
+
+.numero-rifa.seleccionado {
+  background-color: #F2CEA2;
+  color: black;
+}
+
+/* Carrito flotante abajo */
+.carrito-rifa {
+  margin-top: 1.5rem;
+  border-top: 2px solid #eee;
+  padding-top: 1rem;
+  text-align: center;
+}
+
+.lista-numeros {
+  font-weight: bold;
+  font-size: 1rem;
+  color: #000;
+  margin: 0.5rem 0;
+}
+
+.btn-agregar-desc {
+  background-color: #000000;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.btn-agregar-desc:hover {
+  background-color: #FBCD99;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 480px) {
+  .grilla-numeros {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 6px;
+  }
+
+  .numero-rifa {
+    font-size: 0.8rem;
+    padding: 0.6rem;
+  }
+}

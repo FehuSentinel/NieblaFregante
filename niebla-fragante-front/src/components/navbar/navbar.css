@@ -1,0 +1,168 @@
+/* --------------------------
+   🎨 NAVBAR ESTILO GENERAL
+--------------------------- */
+
+.custom-navbar {
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 12px 20px;
+  height: 80px;
+  font-family: 'Lora', serif;
+  border-bottom: 2px solid #000000;
+}
+
+.titulo-navbar {
+  font-family: 'Lora', serif;
+  font-size: 1.2rem;
+  color: #000000;
+  font-weight: 600;
+}
+
+.navbar img {
+  max-height: 40px;
+  width: auto;
+}
+
+/* --------------------------
+   🎯 BOTONES NAV
+--------------------------- */
+
+.nav-btn {
+  background-color: #000000;
+  color: #ffffff;
+  border-radius: 10px;
+  font-weight: 500;
+  padding: 6px 12px;
+  transition: all 0.2s ease;
+  font-family: 'Lora', serif;
+  border: 1px solid #000000;
+}
+
+.nav-btn:hover {
+  color: #ffffff;
+  background-color: #D97904;
+  text-decoration: none;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(217, 121, 4, 0.3);
+  border-color: #D97904;
+}
+
+/* --------------------------
+   🍔 BOTÓN OFFCANVAS
+--------------------------- */
+
+.navbar-toggler {
+  background-color: #000000;
+  color: #ffffff;
+  border-radius: 10px;
+  font-weight: 500;
+  padding: 6px 12px;
+  transition: all 0.2s ease;
+  font-family: 'Lora', serif;
+  border: 1px solid #000000;
+}
+
+.navbar-toggler:hover {
+  color: #ffffff;
+  background-color: #D97904;
+  text-decoration: none;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(217, 121, 4, 0.3);
+  border-color: #D97904;
+}
+
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 0.2rem rgba(217, 121, 4, 0.25);
+}
+
+/* --------------------------
+   👤 DROPDOWN CUENTA
+--------------------------- */
+
+.dropdown-flotante {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #ffffff;
+  border: 2px solid #000000;
+  border-radius: 10px;
+  padding: 0.5rem;
+  z-index: 9999;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.dropdown-flotante .dropdown-item {
+  color: #000000;
+  background: transparent;
+  border: none;
+  padding: 1rem;
+  width: 100%;
+  text-align: left;
+  font-family: 'Lora', serif;
+  transition: all 0.2s ease;
+}
+
+.dropdown-flotante .dropdown-item:hover {
+  background-color: #D97904;
+  color: #ffffff;
+}
+
+/* --------------------------
+   🛒 BADGE DEL CARRITO
+--------------------------- */
+
+.badge-carrito {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background-color: #000000;
+  color: #ffffff;
+  font-size: 0.7rem;
+  padding: 2px 6px;
+  border-radius: 10px;
+  font-weight: bold;
+  border: 1px solid #D97904;
+}
+
+.badge-carrito-inline {
+  color: #ffffff;
+  font-weight: bold;
+  margin-left: 4px;
+}
+
+/* --------------------------
+   📱 RESPONSIVE
+--------------------------- */
+
+@media (max-width: 768px) {
+  .titulo-navbar {
+    font-size: 1rem;
+  }
+
+  .navbar img {
+    height: 36px;
+  }
+
+  .nav-btn {
+    font-size: 0.8rem;
+    padding: 4px 8px;
+  }
+
+  .badge-carrito {
+    font-size: 0.65rem;
+    padding: 1px 5px;
+  }
+  
+  .btn-carrito-movil {
+    width: 55px;
+    height: 42px;
+    font-size: 1rem;
+    padding: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0.5rem;
+    margin-top: 0;
+    align-self: center;
+  }
+}

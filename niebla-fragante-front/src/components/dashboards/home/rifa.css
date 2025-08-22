@@ -1,0 +1,131 @@
+.fondo {
+  position: relative;
+  min-height: 100%;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(6px);
+  border-radius: 20px;
+  margin: 30px auto;
+  padding: 2rem;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* Panel deslizante */
+.slide-panel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  max-width: 100%;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: -4px 0 10px rgba(0,0,0,0.15);
+  border-left: 2px solid #D97904;
+  animation: slideIn 0.3s ease forwards;
+  z-index: 999;
+  padding: 1rem;
+  overflow-y: auto;
+  box-sizing: border-box;
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* 🔥 centrado vertical */
+  padding: 2rem 1rem;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.cerrar-panel {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background-color: #000000;
+  color: white;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.cerrar-panel:hover {
+  background-color: #FBCD99;
+  color: white;
+  transform: scale(1.1);
+}
+
+/* Para pantallas grandes, limitar ancho */
+@media (min-width: 768px) {
+  .slide-panel {
+    width: 360px;
+  }
+}
+
+.btn-agregar-desc {
+  background-color: #000000;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.btn-agregar-desc:hover {
+  background-color: #FBCD99;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.columnaizquierda{
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+}
+.columnaderecha {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem;
+}
+
+/* ✅ Centrado del contenido del carrito dentro del panel móvil */
+.slide-panel .carrito-rifa-flotante {
+  display: flex;
+  justify-content: center;
+}
+
+.slide-panel .contenido-carrito {
+  width: 100%;
+  max-width: 320px;
+}
+
+.fuego {
+  display: inline-block;
+  animation: flame 0.6s infinite ease-in-out;
+  transform-origin: center;
+}
+
+@keyframes flame {
+  0% { transform: scale(1) rotate(0deg); filter: brightness(1); }
+  50% { transform: scale(1.2) rotate(-2deg); filter: brightness(1.3); }
+  100% { transform: scale(1) rotate(2deg); filter: brightness(1); }
+}

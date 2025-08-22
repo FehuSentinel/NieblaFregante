@@ -1,0 +1,120 @@
+/* =============================
+   GRIDPRODUCTOS – ESTRUCTURA RESPONSIVA
+   ============================= */
+
+/* Contenedor de columnas del grid */
+.grid-col {
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+/* Responsive: 2 por fila (xs), 3 por fila (md), 4 por fila (lg) */
+@media (min-width: 0px) {
+  .grid-col {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@media (min-width: 768px) {
+  .grid-col {
+    flex: 0 0 33.333%;
+    max-width: 33.333%;
+  }
+}
+
+@media (min-width: 992px) {
+  .grid-col {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+}
+
+/* Fila tipo flex para tarjetas */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+/* =============================
+   ESTILOS BASE DE LAS TARJETAS
+   ============================= */
+
+.card.card-producto,
+.card.agregar-producto-card {
+  width: 100%;
+  max-width: 240px;
+  height: 100%;
+  border-radius: 12px;
+  border: 2px solid #40140A;
+  background-color: #ffffff;
+  color: #40140A;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.card.card-producto:hover,
+.card.agregar-producto-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =============================
+   TARJETA DE "AGREGAR PRODUCTO"
+   ============================= */
+
+.agregar-producto-card {
+  border: 2px solid #D97904;
+  background-color: #fff5e6;
+  color: #40140A;
+  border-radius: 12px;
+  text-align: center;
+  height: 100%;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Centrado vertical del contenido interno */
+.agregar-producto-card .card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+/* Ícono "+" */
+.agregar-producto-card .card-body i {
+  font-size: 2.5rem;
+  color: #D97904;
+}
+
+/* Texto debajo del ícono */
+.agregar-producto-card .card-body p {
+  margin-top: 0.5rem;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #40140A;
+}
+
+.agregar-producto-card:hover {
+  background-color: #f7e0c0;
+  transform: scale(1.02);
+  cursor: pointer;
+}
+
+/* =============================
+   MOBILE FIX: CENTRADO Y AJUSTE
+   ============================= */
+@media (max-width: 576px) {
+  .agregar-producto-card {
+    margin: 0 auto;
+    max-width: 200px;
+  }
+}

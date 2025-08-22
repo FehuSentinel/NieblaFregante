@@ -1,0 +1,60 @@
+.fondorifalogin{
+    position: relative;
+    height: 420px;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(6px);
+    border-radius: 20px;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: hidden;
+
+}
+
+
+.login-rifa-card {
+  max-width: 450px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border: 2px solid #D97904;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  font-family: 'Lora', serif;
+  color: #40140A;
+}
+
+.login-titulo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.login-texto {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  color: #5a3b2e;
+}
+
+.btn-agregar-desc {
+  background-color: #000000;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.btn-agregar-desc:hover {
+  background-color: #FBCD99;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}

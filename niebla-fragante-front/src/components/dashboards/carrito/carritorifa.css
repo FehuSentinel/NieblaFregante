@@ -1,0 +1,106 @@
+.carrito-rifa-flotante {
+  position: static;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  background-color: #fcfcfc;
+  color: #000000;
+  padding: 1.25rem;
+  border-radius: 1rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+  width: 320px;
+  max-height: 90vh;
+  overflow-y: auto;
+  backdrop-filter: blur(4px);
+  border: 1px solid #D97904;
+  
+}
+
+/* === Título === */
+.contenido-carrito h4 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #000000;
+}
+
+/* === Texto base === */
+.contenido-carrito p {
+  margin: 0.5rem 0;
+}
+
+/* === Grupo por rifa === */
+.grupo-rifa {
+  margin-bottom: 1rem;
+}
+
+.grupo-rifa p {
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+  color: #000000;
+}
+
+/* === Chips con números === */
+.numeros-scroll {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.numero-rifa-chip {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  border: 1px solid #D97904;
+  padding: 0.4rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+}
+
+/* === Temporizador === */
+.cuenta-regresiva {
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  color: #ff0000;
+  text-align: center;
+}
+
+/* === Botón Confirmar === */
+.btn-confirmar-carrito {
+  background-color: #000000;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.btn-confirmar-carrito:hover {
+  background-color: #FBCD99;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* === Responsivo === */
+@media (max-width: 480px) {
+  .carrito-rifa-flotante {
+    width: 90%;
+    right: 5%;
+    bottom: 1rem;
+  }
+}
+
+
+/* 🧾 Centrado del contenido dentro de panel móvil */
+.slide-panel .carrito-rifa-flotante {
+  display: flex;
+  justify-content: center;
+}
+
+.slide-panel .contenido-carrito {
+  width: 100%;
+  max-width: 320px;
+}

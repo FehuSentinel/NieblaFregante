@@ -1,0 +1,64 @@
+/* nosotros.css */
+
+.nosotros-section {
+  background: rgba(152, 152, 152, 0.85); /* fondo semitransparente */
+  padding: 4rem 1.5rem;
+  border-radius: 20px;
+
+  text-align: center;
+  backdrop-filter: blur(6px); /* efecto glass suave */
+  -webkit-backdrop-filter: blur(6px);
+}
+
+@media (prefers-color-scheme: dark) {
+  .nosotros-section {
+    background: rgba(17, 24, 39, 0.7); /* gris oscuro translúcido */
+    color: #f3f4f6; /* texto gris claro */
+  }
+}
+
+.nosotros-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.nosotros-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.nosotros-parrafo {
+  font-size: 1.125rem;
+  margin-bottom: 1.5rem;
+}
+
+.nosotros-subtitulo {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.nosotros-lista {
+  list-style: disc;
+  padding-left: 1.5rem;
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+.nosotros-bloque {
+  margin-bottom: 3rem;
+  text-align: left;
+}
+
+.nosotros-divider {
+  margin: 3rem 0;
+  border-color: #d1d5db;
+}
+
+@media (prefers-color-scheme: dark) {
+  .nosotros-divider {
+    border-color: #374151;
+  }
+}

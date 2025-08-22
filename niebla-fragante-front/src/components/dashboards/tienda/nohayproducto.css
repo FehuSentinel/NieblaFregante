@@ -1,0 +1,22 @@
+.no-productos-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .no-productos-card {
+    background-color: #f5eee6;
+    border-radius: 20px;
+    padding: 2rem 3rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  }
+  
+  .icono-sin-productos {
+    font-size: 3rem;
+    color: #40140A;
+    margin-bottom: 1rem;
+  }
+  
